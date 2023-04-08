@@ -15,5 +15,4 @@ public class SeasonDeterminer {
         if(monthNumber < 1 || monthNumber > 12)
             System.out.println("Wrong month number");
     }
-
 }

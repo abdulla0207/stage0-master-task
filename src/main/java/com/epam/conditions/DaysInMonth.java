@@ -3,13 +3,9 @@ package com.epam.conditions;
 public class DaysInMonth {
 
     public void printDays(int year, int month) {
-        boolean isLeapYear = false;
+        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
         int days = 0;
-        if(year % 4 == 0){
-            if(year % 100 == 0 && year % 400 == 0)
-                isLeapYear = true;
-            isLeapYear = true;
-        }
+
 
         if(month < 1 || month > 12) {
             System.out.println("Invalid month");

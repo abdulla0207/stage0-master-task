@@ -64,7 +64,7 @@ public class ArrayTasks {
     public int findIndexOfNumber(int[] arr, int number) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == number)
-                return i;
+                return i+1;
         }
         return -1;
     }
@@ -101,8 +101,7 @@ public class ArrayTasks {
             if (arr[i] > 0)
                 fillPosNums[counter++] = arr[i];
         }
-        System.out.println(Arrays.toString(Arrays.copyOf(fillPosNums, counter)));
-        return  Arrays.copyOf(fillPosNums, counter);
+        return Arrays.copyOf(fillPosNums, counter);
     }
 
 
@@ -116,10 +115,7 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        //sorting the length of array inside two d array
         Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
-
-        //sorting numbers inside every array in two d array
         for (int[] ints : arr) {
             Arrays.sort(ints);
         }

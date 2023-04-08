@@ -16,7 +16,7 @@ public class Pyramid {
     }
 
     public static void main(String[] args) {
-        new Pyramid().printPyramid(7);
+        new Pyramid().printPyramid(5);
     }
 
 }

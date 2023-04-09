@@ -1,9 +1,6 @@
 package com.epam.algorithms;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Here are the tasks for working with the arrays.
  * <p>
@@ -105,16 +102,16 @@ public class ArrayTasks {
             if (arr[i] > 0)
                 fillPosNums[counter++] = arr[i];
         }
-        List<Integer> withoutZero = new ArrayList<>();
-        for (int fillPosNum : fillPosNums) {
-            if(fillPosNum != 0)
-                withoutZero.add(fillPosNum);
-        }
-        int[] res = new int[withoutZero.size()];
 
-        for (int i = 0; i < withoutZero.size(); i++) {
-            res[i] = withoutZero.get(i);
+        int[] res = new int[counter];
+        int resCounter = 0;
+        for (int fillPosNum : fillPosNums) {
+            if(fillPosNum > 0){
+                res[resCounter] = fillPosNum;
+                resCounter++;
+            }
         }
+
         return res;
     }
 
@@ -129,11 +126,6 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-//        Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
-//        for (int[] ints : arr) {
-//            Arrays.sort(ints);
-//        }
-//        return arr;
         return null;
     }
 

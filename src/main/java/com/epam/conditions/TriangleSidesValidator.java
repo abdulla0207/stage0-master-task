@@ -7,7 +7,11 @@ public class TriangleSidesValidator {
             if(secondSide + thirdSide > firstSide){
                 if(thirdSide + firstSide > secondSide){
                     System.out.println("this is a valid triangle");
+                }else{
+                    System.out.println("it's not a triangle");
                 }
+            }else{
+                System.out.println("it's not a triangle");
             }
         }else{
             System.out.println("it's not a triangle");

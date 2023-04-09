@@ -16,7 +16,7 @@ public class ArrayTasks {
         seasons[0] = "Winter";
         seasons[1] = "Spring";
         seasons[2] = "Summer";
-        seasons[3] = "Fall";
+        seasons[3] = "Autumn";
         return seasons;
     }
 
@@ -65,7 +65,7 @@ public class ArrayTasks {
     public int findIndexOfNumber(int[] arr, int number) {
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] == number)
-                return i+1;
+                return i;
         }
         return -1;
     }
@@ -80,9 +80,8 @@ public class ArrayTasks {
      */
     public String[] reverseArray(String[] arr) {
         String[] res = new String[arr.length];
-        int resIndex = 0;
-        for (int i = arr.length - 1; i >= 0; i--) {
-            res[resIndex] = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            res[arr.length-1] = arr[i];
         }
         return res;
     }

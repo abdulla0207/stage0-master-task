@@ -12,7 +12,10 @@ public class Animal {
     }
 
     public String getDescription(){
-        return "This animal is mostly "+color+". It has "+numberOfPaws+" paws and "+(hasFur ? "a" : "no")+" fur.";
+        String singular = "";
+        if(numberOfPaws > 1)
+            singular = "s";
+        return "This animal is mostly "+color+". It has "+numberOfPaws+" paw"+singular+ " and "+(hasFur ? "a" : "no")+" fur.";
     }
 
 }

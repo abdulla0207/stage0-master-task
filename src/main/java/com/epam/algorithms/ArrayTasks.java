@@ -81,11 +81,10 @@ public class ArrayTasks {
     public String[] reverseArray(String[] arr) {
         String[] res = new String[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            res[arr.length-1] = arr[i];
+            res[arr.length-i-1] = arr[i];
         }
         return res;
     }
-
     /**
      * Return new int[] array obtained from arr int[] array by choosing positive numbers only. P.S. 0 is not a positive
      * number =)

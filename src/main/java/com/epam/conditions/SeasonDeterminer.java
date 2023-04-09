@@ -3,6 +3,11 @@ package com.epam.conditions;
 public class SeasonDeterminer {
 
     public void tellTheSeason(int monthNumber) {
+        if(monthNumber < 1 || monthNumber > 12) {
+            System.out.println("Wrong month number");
+            return;
+        }
+
         if(monthNumber >= 3 && monthNumber <= 5)
             System.out.println("Spring");
         else if(monthNumber >= 6 && monthNumber <= 8)
@@ -11,8 +16,9 @@ public class SeasonDeterminer {
             System.out.println("Fall");
         else
             System.out.println("Winter");
+    }
 
-        if(monthNumber < 1 || monthNumber > 12)
-            System.out.println("Wrong month number");
+    public static void main(String[] args) {
+        new SeasonDeterminer().tellTheSeason(0);
     }
 }

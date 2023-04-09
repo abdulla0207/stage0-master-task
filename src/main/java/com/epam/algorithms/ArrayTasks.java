@@ -1,7 +1,8 @@
 package com.epam.algorithms;
 
-import java.util.Arrays;
-import java.util.Comparator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Here are the tasks for working with the arrays.
@@ -14,7 +15,12 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-        return new String[]{"Winter", "Spring", "Summer", "Fall"};
+        String[] seasons = new String[4];
+        seasons[0] = "Winter";
+        seasons[1] = "Spring";
+        seasons[2] = "Summer";
+        seasons[3] = "Fall";
+        return seasons;
     }
 
     /**
@@ -99,7 +105,17 @@ public class ArrayTasks {
             if (arr[i] > 0)
                 fillPosNums[counter++] = arr[i];
         }
-        return Arrays.copyOf(fillPosNums, counter);
+        List<Integer> withoutZero = new ArrayList<>();
+        for (int fillPosNum : fillPosNums) {
+            if(fillPosNum != 0)
+                withoutZero.add(fillPosNum);
+        }
+        int[] res = new int[withoutZero.size()];
+
+        for (int i = 0; i < withoutZero.size(); i++) {
+            res[i] = withoutZero.get(i);
+        }
+        return res;
     }
 
 
@@ -113,11 +129,12 @@ public class ArrayTasks {
      * arr = [[3, 1, 2,], [3,2]] -> [[2, 3], [1, 2, 3]] arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
-        for (int[] ints : arr) {
-            Arrays.sort(ints);
-        }
-        return arr;
+//        Arrays.sort(arr, Comparator.comparingInt(a -> a.length));
+//        for (int[] ints : arr) {
+//            Arrays.sort(ints);
+//        }
+//        return arr;
+        return null;
     }
 
 }
